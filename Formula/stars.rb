@@ -1,9 +1,9 @@
 class Stars < Formula
   desc "Explore your Github stars"
   homepage "https://github.com/gkze/stars"
-  url "https://github.com/gkze/stars/releases/download/v0.4.1/stars_0.4.1_Darwin_x86_64.tar.gz"
-  version "0.4.1"
-  sha256 "9465a47ca1d71a73dfa46c594d7ce6aaacc1c6f53526881fdbf4e25ff08a7c80"
+  url "https://github.com/gkze/stars/releases/download/v0.4.2/stars_0.4.2_Darwin_x86_64.tar.gz"
+  version "0.4.2"
+  sha256 "b3723e749bba849af51bc82cf36cdf6442d940e5a0c8aab4f2bf4489de74ee45"
 
   def install
     bin.install "stars"

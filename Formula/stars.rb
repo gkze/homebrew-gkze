@@ -4,7 +4,7 @@ class Stars < Formula
   homepage "https://github.com/gkze/stars"
   url "https://github.com/gkze/stars/releases/download/v0.4.9/stars_0.4.9_Darwin_x86_64.tar.gz"
   version "0.4.9"
-  sha256 "8c11eb0c7e546e4eab4b94e3f8a5fcfb4c359b98afc9ce69da215737b644a00b"
+  sha256 "094f8c4a333f6be3910e1f0c804e4f661570c88ec065aab7aaed63ffac309a7b"
 
   def install
     bin.install "stars"

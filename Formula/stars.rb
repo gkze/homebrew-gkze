@@ -2,16 +2,16 @@
 class Stars < Formula
   desc "Explore your Github stars"
   homepage "https://github.com/gkze/stars"
-  version "0.9.17"
+  version "0.10.17"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/gkze/stars/releases/download/v0.9.17/stars_0.9.17_Darwin_x86_64.tar.gz"
-    sha256 "fb210800b405f957171dfabe62f9d925bb0e34caea429554fa66330b31304e3d"
+    url "https://github.com/gkze/stars/releases/download/v0.10.17/stars_0.10.17_Darwin_x86_64.tar.gz"
+    sha256 "23223abf5a234a990b7ffa57e37dbb63ff159caffe14544c91faeace5bc75d4e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/stars/releases/download/v0.9.17/stars_0.9.17_Linux_x86_64.tar.gz"
-      sha256 "03d5b05bb9d6de61df271b84469b79a145f61b972ad799355c430a996ff09ed2"
+      url "https://github.com/gkze/stars/releases/download/v0.10.17/stars_0.10.17_Linux_x86_64.tar.gz"
+      sha256 "3526c8e219802cea1d308bad59de82183c5e839165c673aa23c9a1061d7ac44b"
     end
   end
 

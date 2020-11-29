@@ -2,17 +2,16 @@
 class Awssume < Formula
   desc "Go package to switch between AWS IAM Roles"
   homepage "https://github.com/gkze/awssume"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/gkze/awssume/releases/download/v0.1.0/awssume_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "86086e9ec559a8dcb16fbfd2991f903bad7a855ccb515e93a5aeac7f80928d77"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/gkze/awssume/releases/download/v0.1.0/awssume_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "54f6f3b79d35a78ad95200f38e3f252dedbe2464f80eb2f75bab90efc38b1439"
-    end
+    url "https://github.com/gkze/awssume/releases/download/v0.1.1/awssume_0.1.1_Darwin_x86_64.tar.gz"
+    sha256 "6ed09a924220260f06eae8f9c8e7d270105be4d91dcfc495c17e079551c4f1a4"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/gkze/awssume/releases/download/v0.1.1/awssume_0.1.1_Linux_x86_64.tar.gz"
+    sha256 "75cc66ffed43a1003b1356cdc46f58822b4c2a058f86f587c40a7c710fc1230a"
   end
 
   def install

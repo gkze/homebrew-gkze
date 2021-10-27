@@ -5,20 +5,28 @@
 class Emojictl < Formula
   desc "Manage your emojis"
   homepage "https://github.com/gkze/emojictl"
-  version "0.1.2"
-  bottle :unneeded
+  version "0.2.2"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/gkze/emojictl/releases/download/v0.1.2/emojictl_0.1.2_Darwin_x86_64.tar.gz"
-    sha256 "759d967b01891be9b9618bdb8ecb7420dfda2f993d3d449ffb676e589fab8848"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gkze/emojictl/releases/download/v0.1.2/emojictl_0.1.2_Linux_x86_64.tar.gz"
-    sha256 "d8f5b52e25209d3dd9424481c5487464108232ec01aa0f83908b1ea89d41ed44"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/gkze/emojictl/releases/download/v0.2.2/emojictl_0.2.2_Darwin_x86_64.tar.gz"
+      sha256 "61946ef258eafbf766d3010c6ba6e9fd12fb9e7132188980ec27a9def7c9fdb5"
+
+      def install
+        bin.install "emojictl"
+      end
+    end
   end
 
-  def install
-    bin.install "emojictl"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/gkze/emojictl/releases/download/v0.2.2/emojictl_0.2.2_Linux_x86_64.tar.gz"
+      sha256 "00f98a6abc0e9f6c80d231e953ac249150c9b8d8945670f675ff16c71f862f63"
+
+      def install
+        bin.install "emojictl"
+      end
+    end
   end
 
   test do

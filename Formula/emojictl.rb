@@ -5,12 +5,12 @@
 class Emojictl < Formula
   desc "Manage your emojis"
   homepage "https://github.com/gkze/emojictl"
-  version "0.2.2"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/emojictl/releases/download/v0.2.2/emojictl_0.2.2_Darwin_x86_64.tar.gz"
-      sha256 "61946ef258eafbf766d3010c6ba6e9fd12fb9e7132188980ec27a9def7c9fdb5"
+      url "https://github.com/gkze/emojictl/releases/download/v0.3.2/emojictl_0.3.2_Darwin_x86_64.tar.gz"
+      sha256 "0d1685f524998be677d949eeff05fb5d388023c74bb04e6d77d5b2aac6acf539"
 
       def install
         bin.install "emojictl"
@@ -20,8 +20,8 @@ class Emojictl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/emojictl/releases/download/v0.2.2/emojictl_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "00f98a6abc0e9f6c80d231e953ac249150c9b8d8945670f675ff16c71f862f63"
+      url "https://github.com/gkze/emojictl/releases/download/v0.3.2/emojictl_0.3.2_Linux_x86_64.tar.gz"
+      sha256 "4abfcd8f5138f6a83c5e7dcfd92b5573bc77a478a9120288bd7da3092bf66292"
 
       def install
         bin.install "emojictl"

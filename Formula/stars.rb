@@ -5,20 +5,20 @@
 class Stars < Formula
   desc "Explore your Github stars"
   homepage "https://github.com/gkze/stars"
-  version "0.15.24"
+  version "0.16.24"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gkze/stars/releases/download/v0.15.24/stars_0.15.24_Darwin_arm64.tar.gz"
-      sha256 "a202b4ebe7fe049673daef88150a7a512d77eaa430a00d071c1fc5d3b94dc6fb"
+      url "https://github.com/gkze/stars/releases/download/v0.16.24/stars_0.16.24_Darwin_arm64.tar.gz"
+      sha256 "9d518da0542e30fd56f5757be6172d5dfdfc8b3338fb1776efb5107d6d0f7b7a"
 
       def install
         bin.install "stars"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/stars/releases/download/v0.15.24/stars_0.15.24_Darwin_x86_64.tar.gz"
-      sha256 "63896a037af52247d7d09474b8ba5cb38afe52ec7a1cd4a059740635cee95aa4"
+      url "https://github.com/gkze/stars/releases/download/v0.16.24/stars_0.16.24_Darwin_x86_64.tar.gz"
+      sha256 "96cf5a8900b3776b17b4736d8d36d041494144ee77d86527675d112d15a9ccb4"
 
       def install
         bin.install "stars"
@@ -28,16 +28,16 @@ class Stars < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gkze/stars/releases/download/v0.15.24/stars_0.15.24_Linux_arm64.tar.gz"
-      sha256 "10e3a7feab319b484745033bf9240bf6e7b2398dc83a666299d2875aae731880"
+      url "https://github.com/gkze/stars/releases/download/v0.16.24/stars_0.16.24_Linux_arm64.tar.gz"
+      sha256 "f7751e057966be7674c3e96a1be7854974892a77846d224610a3db2e7f2dd108"
 
       def install
         bin.install "stars"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/stars/releases/download/v0.15.24/stars_0.15.24_Linux_x86_64.tar.gz"
-      sha256 "5ac96e9c2e98bab905b41809b92ff7865e17f6678927f5cb8fb6316b613c5625"
+      url "https://github.com/gkze/stars/releases/download/v0.16.24/stars_0.16.24_Linux_x86_64.tar.gz"
+      sha256 "304440a5d15c1556fb080b28bee754a0a04ceeeabd55e6923aa862ced9e5193e"
 
       def install
         bin.install "stars"

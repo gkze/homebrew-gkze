@@ -5,23 +5,31 @@
 class Awssume < Formula
   desc "Go package to switch between AWS IAM Roles"
   homepage "https://github.com/gkze/awssume"
-  version "0.5.2"
+  version "0.6.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gkze/awssume/releases/download/v0.5.2/awssume_0.5.2_Darwin_x86_64.tar.gz"
-      sha256 "2c713f83abdd723546a82e2d12e59ae6f84b778f05a7be338d6cd574d2ece019"
+    url "https://github.com/gkze/awssume/releases/download/v0.6.2/awssume_0.6.2_Darwin_x86_64.tar.gz"
+    sha256 "b70f90de6e89c3366b1716cecc47d328439f5c7a71a78d98a8b660ae2a4e3e52"
 
-      def install
-        bin.install "awssume"
+    def install
+      bin.install "awssume"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Awssume
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/awssume/releases/download/v0.5.2/awssume_0.5.2_Linux_x86_64.tar.gz"
-      sha256 "23bae5e5a205000fc6932f5b29e694699facd050a3e3f57d323776bb4f51effa"
+      url "https://github.com/gkze/awssume/releases/download/v0.6.2/awssume_0.6.2_Linux_x86_64.tar.gz"
+      sha256 "c783878586a0b52b7d292b081d46443641b0c0d8c02373df60b5f807505a2f7c"
 
       def install
         bin.install "awssume"

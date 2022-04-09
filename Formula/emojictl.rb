@@ -5,23 +5,31 @@
 class Emojictl < Formula
   desc "Manage your emojis"
   homepage "https://github.com/gkze/emojictl"
-  version "0.3.2"
+  version "0.4.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gkze/emojictl/releases/download/v0.3.2/emojictl_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "0d1685f524998be677d949eeff05fb5d388023c74bb04e6d77d5b2aac6acf539"
+    url "https://github.com/gkze/emojictl/releases/download/v0.4.2/emojictl_0.4.2_Darwin_x86_64.tar.gz"
+    sha256 "23b674e4f38cbda286c599fef434ba3db61e44bd8b555f17ad5bdcd424999110"
 
-      def install
-        bin.install "emojictl"
+    def install
+      bin.install "emojictl"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Emojictl
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/emojictl/releases/download/v0.3.2/emojictl_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "4abfcd8f5138f6a83c5e7dcfd92b5573bc77a478a9120288bd7da3092bf66292"
+      url "https://github.com/gkze/emojictl/releases/download/v0.4.2/emojictl_0.4.2_Linux_x86_64.tar.gz"
+      sha256 "4c1a65e33cab5f87feaa39a2c51457202d0462706158528476e46c1b8df174b4"
 
       def install
         bin.install "emojictl"

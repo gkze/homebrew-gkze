@@ -1,19 +1,19 @@
 class CuratorCli < Formula
   desc "A CLI tool for curating and managing Git repositories across multiple platforms"
   homepage "https://github.com/gkze/curator"
-  version "0.3.1"
+  version "0.3.2"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/gkze/curator/releases/download/v0.3.1/curator_cli-aarch64-apple-darwin.tar.xz"
-      sha256 "faa0b05dbd0e74184ac3bbb576d3214a9338623d0e036a1a52a6d78281645bed"
+      url "https://github.com/gkze/curator/releases/download/v0.3.2/curator_cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a7cc12964d36eb8e884c2b98cbcc21dbf35dad1e01e3c0ecd48fd0cb002aeda5"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gkze/curator/releases/download/v0.3.1/curator_cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c9f37756f317c68a855a7d68805d7b4f286e15b9db3df2ca21356c5ca5c1713a"
+      url "https://github.com/gkze/curator/releases/download/v0.3.2/curator_cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "11ab02fad8bf26bf7a5b8fa3ff49faa3ba6b8ea4f619afcefb96ff6b032d0e3e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gkze/curator/releases/download/v0.3.1/curator_cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e121ed8f57dd98d272ff34823568d2c89a67769c8e40256d295ca07e2d87139c"
+      url "https://github.com/gkze/curator/releases/download/v0.3.2/curator_cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3342ef23939815138802a1c4832c402959b0ff28f75c584647dc394d82f55e69"
     end
   end
   license "MIT"
